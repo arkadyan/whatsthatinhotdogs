@@ -113,6 +113,12 @@ body {
         float: right;
         color: #bfbfbf;
         clear: right; }
+        body section.player header aside span {
+          text-indent: -9999px;
+          width: 18px;
+          height: 18px;
+          background: url(../images/smallhotdog.png);
+          display: inline-block; }
     body section.player ul {
       list-style: none; }
       body section.player ul li {

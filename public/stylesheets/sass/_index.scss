@@ -83,6 +83,14 @@ body {
         float: right;
         color: lighten($dark-gray, 40%);
         clear: right;
+
+        span {
+          text-indent: -9999px;
+          width: 18px;
+          height: 18px;
+          background: url(../images/smallhotdog.png);
+          display: inline-block;
+        }
       }
     }
 
