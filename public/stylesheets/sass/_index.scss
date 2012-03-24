@@ -137,3 +137,16 @@ ul.ui-autocomplete {
     }
   }
 }
+
+footer {
+  color: lighten($dark-gray, 40%);
+  margin-top: 20px;
+
+  a {
+    color: lighten($dark-gray, 20%);
+
+    &:hover {
+      color: $dark-gray;
+    }
+  }
+}

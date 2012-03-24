@@ -151,3 +151,11 @@ ul.ui-autocomplete {
       padding: 10px; }
       ul.ui-autocomplete li a:focus, ul.ui-autocomplete li a:hover {
         background: #e3e3e3; }
+
+footer {
+  color: #bfbfbf;
+  margin-top: 20px; }
+  footer a {
+    color: #8c8c8c; }
+    footer a:hover {
+      color: #595959; }
