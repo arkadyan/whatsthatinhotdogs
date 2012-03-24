@@ -7,10 +7,10 @@ What's That in Hot Dogs?
 
 Basic API to pull data from USA Today and hotdog CSV
 
-*Lookup team - defaults to most recent completed season
+* Lookup team - defaults to most recent completed season
 
-http://severe-mist-9223.herokuapp.com/team/redsox
+ * http://severe-mist-9223.herokuapp.com/team/redsox
 
-*Will also take a year parameter
+* Will also take a year parameter
 
-http://severe-mist-9223.herokuapp.com/team/cubs/2009
+ * http://severe-mist-9223.herokuapp.com/team/cubs/2009
