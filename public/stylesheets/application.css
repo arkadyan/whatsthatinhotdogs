@@ -44,9 +44,9 @@ input, select {
 
 /* End hide from IE Mac */
 @font-face {
-  font-family: '../fonts/ChunkFive';
-  src: url("../fonts/Chunkfive-webfont.eot");
-  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../fonts/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
+  font-family: 'public/fonts/ChunkFive';
+  src: url("public/fonts/Chunkfive-webfont.eot");
+  src: url("public/fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("public/fonts/Chunkfive-webfont.woff") format("woff"), url("public/fonts/Chunkfive-webfont.ttf") format("truetype"), url("public/fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
