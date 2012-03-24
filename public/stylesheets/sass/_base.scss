@@ -1,5 +1,5 @@
 @font-face {
-    font-family: '../fonts/ChunkFive';
+    font-family: 'ChunkFive';
     src: url('../fonts/Chunkfive-webfont.eot');
     src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/Chunkfive-webfont.woff') format('woff'),
@@ -19,3 +19,5 @@ $fg-gutter: golden-ratio($body-font-size, 3);
 $fg-max-width: 1000px;
 
 $dark-gray: #595959;
+$red: #e1553e;
+$blue: #5191bd;

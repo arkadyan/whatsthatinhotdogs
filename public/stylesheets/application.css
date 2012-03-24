@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CSS Reset
 ---------------------------------------- */
 html, body, div, span, object, iframe,
@@ -44,9 +45,9 @@ input, select {
 
 /* End hide from IE Mac */
 @font-face {
-  font-family: 'public/fonts/ChunkFive';
-  src: url("public/fonts/Chunkfive-webfont.eot");
-  src: url("public/fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("public/fonts/Chunkfive-webfont.woff") format("woff"), url("public/fonts/Chunkfive-webfont.ttf") format("truetype"), url("public/fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
+  font-family: 'ChunkFive';
+  src: url("../fonts/Chunkfive-webfont.eot");
+  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../fonts/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -63,16 +64,20 @@ body {
     text-align: left; }
     body header.main h1 {
       font: 72px "ChunkFive", Helvetica, Arial, serif;
-      margin: 60px 0 -10px;
-      color: #595959; }
+      margin: 80px 0 0;
+      color: #e1553e; }
     body header.main p {
-      font-size: 18px;
-      color: #bfbfbf;
-      margin-left: .5em; }
+      font-size: 26px;
+      text-align: center;
+      padding: 0 60px;
+      color: #bfbfbf; }
   body form input[type="text"] {
     border: 1px solid #ccc;
     font: 24px "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     padding: 6px 8px;
+    -webkit-box-shadow: inset 0 2px 3px #eeeeee;
+    -moz-box-shadow: inset 0 2px 3px #eeeeee;
+    box-shadow: inset 0 2px 3px #eeeeee;
     -webkit-font-smoothing: antialiased;
     width: 48.821%;
     outline: none; }
@@ -100,12 +105,25 @@ body {
       padding: 60px 0 20px; }
       body section.player header h2 {
         font: 48px "ChunkFive", Helvetica, Arial, serif;
-        color: #595959;
-        float: left; }
-      body section.player header p {
+        color: #5191bd;
+        float: left;
+        margin-right: 30px; }
+      body section.player header div {
+        float: right;
+        color: #8c8c8c;
+        margin-top: 4px; }
+        body section.player header div strong {
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          display: inline-block; }
+          body section.player header div strong:after {
+            content: "–";
+            padding: 0 10px;
+            display: inline-block; }
+      body section.player header aside {
         float: right;
         color: #bfbfbf;
-        margin-top: 14px; }
+        clear: right; }
     body section.player ul {
       list-style: none; }
       body section.player ul li {
