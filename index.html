@@ -22,22 +22,22 @@
   </script>
   
   <script type="text/template" id="player-template">
-    <div class="player">
-      <div class="name">
-        <%= player_full_name %>
-      </div>
-      <div class="salary">
-        <%= hotdog_salary %> hot dogs
-      </div>
-    </div>
+    <header>
+      <h2><%= player_full_name %></h2>
+      <div class="team"><%= team_full_name %></div>
+      <div class="salary"><%= hotdog_salary %> hot dogs</div>
+      <aside>
+        <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
+      </aside>
+    </header>
+
+    <ul class="hotdog">
+      <% for (var i = 0; i <= Math.round(parseFloat(hotdog_salary)); i++) { %>
+        <li>hot dog</li>
+      <% } %>
+    </ul>
   </script>
 
-
-  <script type="text/javascript" charset="utf-8">
-    jQuery(function() {
-      window.players.fetch();
-    })
-  </script>
 
   <script type="text/javascript" charset="utf-8">
     jQuery(function() {
@@ -58,85 +58,11 @@
       <input type="submit" value="Find player" />
     </form>
 
+
     <section id="container">
+      
     </section>
 
-    <section class="player">
-      <header>
-      <h2>Player name</h2>
-      <aside>
-        <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
-      </aside>
-      </header>
-
-      <ul class="hotdog">
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-        <li>hot dog</li>
-      </ul>
-
-    </section>
   </section>
 </body>
 </html>
