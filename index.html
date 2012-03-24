@@ -4,6 +4,8 @@
  <meta charset="UTF-8">
  <title>What's That in Hot Dogs?</title>
 
+  <link rel="stylesheet" href="public/stylesheets/application.css" />
+
   <script src="public/javascripts/vendor/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/vendor/jquery-ui-1.8.18.custom.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/vendor/underscore-min.js" type="text/javascript" charset="utf-8"></script>
@@ -30,16 +32,20 @@
     </div>
   </script>
 
+
   <script type="text/javascript" charset="utf-8">
     jQuery(function() {
       window.players.fetch();
     })
   </script>
-  
+
 </head>
 <body>
-  <h1>What&rsquo;s that in hot dogs?</h1>
-  <p>Search for your favorite player and see how many hot dogs they cost.</p>
+  <section class="content">
+    <header>
+      <h1>What&rsquo;s that in hot dogs?</h1>
+      <p>Search for your favorite player and see how many hot dogs they cost.</p>
+    </header>
 
   <form action="" method="get" accept-charset="utf-8">
     <input type="search" name="" id="" value="" />
@@ -50,81 +56,93 @@
     
   </section>
 
-  <section>
-    <ul>
-      <li></li>
-    </ul>
-  </section>
+    <section class="example-players">
+      <h3>Example players</h3>
+      <ul>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+        <li><a href="#">Alex Rodriguez</a></li>
+      </ul>
+    </section>
 
-  <section class="player">
-    <h2>Player name</h2>
+    <section class="player">
+      <h2>Player name</h2>
 
-    <ul class="hotdog">
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-      <li>hot dog</li>
-    </ul>
+      <ul class="hotdog">
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+        <li>hot dog</li>
+      </ul>
 
-    <aside>
-      <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
-    </aside>
+      <aside>
+        <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
+      </aside>
+    </section>
   </section>
   <footer>
     
