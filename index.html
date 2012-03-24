@@ -11,6 +11,7 @@
   <script src="public/javascripts/vendor/underscore-min.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/vendor/backbone-min.js" type="text/javascript" charset="utf-8"></script>
   
+  <script src="public/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/models.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/views.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/router.js" type="text/javascript" charset="utf-8"></script>
@@ -25,7 +26,7 @@
     <header>
       <h2><%= player_full_name %></h2>
       <div class="team"><%= team_full_name %></div>
-      <div class="salary"><%= hotdog_salary %> hot dogs</div>
+      <div class="salary"><%= commify(parseInt(hotdog_salary)) %> hot dogs</div>
       <aside>
         <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
       </aside>
