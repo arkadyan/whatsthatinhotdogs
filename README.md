@@ -5,7 +5,8 @@ What's That in Hot Dogs?
 
 [Hot Dog Raphael Plugin](https://gist.github.com/2183517)
 
-Basic API to pull data from USA Today and hotdog CSV.  Returns JSON.  Supports JSONP. 
+Basic API to pull data from USA Today sports salary API and add ballpark hotdog price data.  Returns JSON.  Supports JSONP.
+Data is available from 2003 to 2011.  
 
 * Lookup team - defaults to most recent completed season
 
