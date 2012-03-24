@@ -30,15 +30,22 @@ window.PlayersView = Backbone.View.extend({
     var $players,
         collection = this.collection;
       
-    $(this.el).html(this.template({}));
-    $players = this.$('.players');
-    collection.each(function(player) {
-      var view = new PlayerView({
-        model: player,
-        collection: collection
-      });
-      $players.append(view.render().el);
+    // DON'T DISPLAY ON THE PAGE FOR NOW
+    // $(this.el).html(this.template({}));
+    // $players = this.$('.players');
+    // collection.each(function(player) {
+    //   var view = new PlayerView({
+    //     model: player,
+    //     collection: collection
+    //   });
+    //   $players.append(view.render().el);
+    // });
+    
+    // Set up autocomplete on the search box.
+    $('#player_search').autocomplete({
+      source: collection.names()
     });
+    
     return this;
   }
   

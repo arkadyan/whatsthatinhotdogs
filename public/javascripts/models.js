@@ -7,7 +7,13 @@
   
   window.Players = Backbone.Collection.extend({
     model: Player,
-    url: 'players_2011.json'
+    url: 'players_2011.json',
+    
+    names: function() {
+      return this.models.map(function(player){
+        return player.get('player_full_name');
+      });
+    }
   });
 
   window.Team = Players.extend({
