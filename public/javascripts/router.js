@@ -11,9 +11,6 @@ window.HotDog = Backbone.Router.extend({
   },
     
   home: function() {
-    var $container = $('#container');
-    $container.empty();
-    $container.append(this.players.render().el);
   }
 });
   
