@@ -28,18 +28,18 @@ input, select {
   vertical-align: middle; }
 
 /* Clearfix hack I love you */
-.clearfix:after, body section.content section.example-players ul:after, body section.content section.player ul:after {
+.clearfix:after, body section.content section.player ul:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, body section.content section.example-players ul, body section.content section.player ul {
+.clearfix, body section.content section.player ul {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, body section.content section.example-players ul, body section.content section.player ul {
+.clearfix, body section.content section.player ul {
   display: block; }
 
 /* End hide from IE Mac */
@@ -68,27 +68,40 @@ body {
         font-size: 18px;
         color: #bfbfbf;
         margin-left: .5em; }
-    body section.content form input[type="search"] {
-      border: none;
+    body section.content form input[type="text"] {
+      border: 1px solid #ccc;
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
       -o-border-radius: 3px;
       border-radius: 3px;
-      font: 24px "ChunkFive", Helvetica, Arial, serif; }
-    body section.content section.example-players h3 {
-      text-transform: uppercase;
-      border-bottom: 1px solid #ccc; }
-    body section.content section.example-players ul li {
-      list-style: none;
-      width: 31.762%;
-      float: left;
-      text-align: left;
-      margin-right: 2.358%; }
-      body section.content section.example-players ul li:nth-child(3n) {
-        margin-right: 0; }
-    body section.content section.player ul {
-      list-style: none; }
-      body section.content section.player ul li {
-        float: left;
-        width: 16px; }
+      font: 24px "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      padding: 4px 8px;
+      -webkit-font-smoothing: antialiased;
+      width: 48.821%; }
+    body section.content form input[type="submit"] {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      font: 24px "ChunkFive", Helvetica, Arial, serif;
+      padding: 8px 14px;
+      border: none;
+      line-height: 1em;
+      background: #595959;
+      color: #fff;
+      text-shadow: 0 -1px 0 #262626;
+      -webkit-font-smoothing: antialiased; }
+      body section.content form input[type="submit"]:hover {
+        background: #3f3f3f;
+        cursor: pointer; }
+    body section.content section.player {
+      margin-top: 30px; }
+      body section.content section.player h2 {
+        font: 48px "ChunkFive", Helvetica, Arial, serif;
+        color: #595959; }
+      body section.content section.player ul {
+        list-style: none; }
+        body section.content section.player ul li {
+          float: left; }

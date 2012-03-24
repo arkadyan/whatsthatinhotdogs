@@ -25,48 +25,47 @@ body {
     }
 
     form {
-      input[type="search"] {
-        border: none;
+      input[type="text"] {
+        border: 1px solid #ccc;
+        @include border-radius(3px);
+        font: 24px $body-font-family;
+        padding: 4px 8px;
+        -webkit-font-smoothing: antialiased;
+        width: flex-grid(6);
+      }
+
+      input[type="submit"] {
         @include border-radius(3px);
         font: 24px $header-font-family;
-      }
+        padding: 8px 14px;
+        border: none;
+        line-height: 1em;
+        background: $dark-gray;
+        color: #fff;
+        text-shadow: 0 -1px 0 darken($dark-gray, 20%);
+        -webkit-font-smoothing: antialiased;
 
-      input[type="submit"]{
-        
-      }
-    }
-
-    section.example-players {
-      h3 {
-        text-transform: uppercase;
-        border-bottom: 1px solid #ccc;
-      }
-
-      ul {
-        @extend .clearfix;
-
-        li {
-          list-style: none;
-          width: flex-grid(4);
-          float: left;
-          text-align: left;
-          margin-right: flex-gutter();
-
-          &:nth-child(3n) {
-            margin-right: 0;
-          }
+        &:hover {
+          background: darken($dark-gray, 10%);
+          cursor: pointer;
         }
       }
     }
 
     section.player {
+      margin-top: 30px;
+
+      h2 {
+        font: 48px $header-font-family;
+        color: $dark-gray;
+      }
+
       ul {
         list-style: none;
         @extend .clearfix;
 
         li {
           float: left;
-          width: 16px;
         }
       }
     }
