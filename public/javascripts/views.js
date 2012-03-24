@@ -1,4 +1,5 @@
 window.PlayerView = Backbone.View.extend({
+  tagName: 'li',
   className: 'player',
     
   initialize: function() {
