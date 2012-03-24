@@ -32,7 +32,11 @@ window.PlayersView = Backbone.View.extend({
       
     // Set up autocomplete on the search box.
     $('#player_search').autocomplete({
-      source: collection.names()
+      source: collection.names(),
+      select: function(event, ui) {
+        var playerView = new PlayerView({model: players.find_by_name(ui.item.value)});
+        $("#player").html(playerView.render().el);
+      }
     });
     
     return this;
