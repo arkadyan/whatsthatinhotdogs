@@ -28,18 +28,18 @@ input, select {
   vertical-align: middle; }
 
 /* Clearfix hack I love you */
-.clearfix:after {
+.clearfix:after, body section.content section.example-players ul:after, body section.content section.player ul:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix {
+.clearfix, body section.content section.example-players ul, body section.content section.player ul {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix {
+.clearfix, body section.content section.example-players ul, body section.content section.player ul {
   display: block; }
 
 /* End hide from IE Mac */
@@ -53,3 +53,19 @@ body {
       margin-bottom: 10px; }
     body section.content header p {
       margin-bottom: 20px; }
+    body section.content section.example-players h3 {
+      text-transform: uppercase;
+      border-bottom: 1px solid #ccc; }
+    body section.content section.example-players ul li {
+      list-style: none;
+      width: 31.762%;
+      float: left;
+      text-align: left;
+      margin-right: 2.358%; }
+      body section.content section.example-players ul li:nth-child(3n) {
+        margin-right: 0; }
+    body section.content section.player ul {
+      list-style: none; }
+      body section.content section.player ul li {
+        float: left;
+        width: 16px; }

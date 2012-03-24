@@ -3,7 +3,7 @@ body {
 
   section.content {
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: $fg-max-width;
 
     header {
       h1 {
@@ -17,7 +17,41 @@ body {
     }
 
     form {
-      
+    }
+
+    section.example-players {
+      h3 {
+        text-transform: uppercase;
+        border-bottom: 1px solid #ccc;
+      }
+
+      ul {
+        @extend .clearfix;
+
+        li {
+          list-style: none;
+          width: flex-grid(4);
+          float: left;
+          text-align: left;
+          margin-right: flex-gutter();
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    section.player {
+      ul {
+        list-style: none;
+        @extend .clearfix;
+
+        li {
+          float: left;
+          width: 16px;
+        }
+      }
     }
   }
 }
