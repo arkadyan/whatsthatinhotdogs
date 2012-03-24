@@ -5,7 +5,7 @@ What's That in Hot Dogs?
 
 [Hot Dog Raphael Plugin](https://gist.github.com/2183517)
 
-Basic API to pull data from USA Today and hotdog CSV
+Basic API to pull data from USA Today and hotdog CSV.  Returns JSON.  Supports JSONP. 
 
 * Lookup team - defaults to most recent completed season
 
@@ -14,3 +14,6 @@ Basic API to pull data from USA Today and hotdog CSV
 * Will also take a year parameter
 
  * http://severe-mist-9223.herokuapp.com/team/cubs/2009
+
+* JSONP
+ * http://severe-mist-9223.herokuapp.com/team/cubs/2009?calback=?
