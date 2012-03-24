@@ -1,0 +1,21 @@
+@font-face {
+    font-family: '../fonts/ChunkFive';
+    src: url('../fonts/Chunkfive-webfont.eot');
+    src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$header-font-family: 'ChunkFive', Helvetica, Arial, serif;
+$body-font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+$body-font-size: 16px;
+
+$fg-max-columns: 12;
+$fg-column: golden-ratio($body-font-size, 5);
+$fg-gutter: golden-ratio($body-font-size, 3);
+$fg-max-width: 1400px;
+
+$dark-gray: #595959;

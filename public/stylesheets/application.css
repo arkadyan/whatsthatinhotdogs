@@ -43,16 +43,39 @@ input, select {
   display: block; }
 
 /* End hide from IE Mac */
+@font-face {
+  font-family: '../fonts/ChunkFive';
+  src: url("../fonts/Chunkfive-webfont.eot");
+  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../fonts/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-  text-align: center; }
+  text-align: center;
+  font: 16px "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
   body section.content {
     margin: 0 auto;
     max-width: 1400px; }
-    body section.content header h1 {
-      font: bold 34px Helvetica, Arial, sans-serif;
-      margin-bottom: 10px; }
-    body section.content header p {
-      margin-bottom: 20px; }
+    body section.content header {
+      margin: 0 auto 20px;
+      max-width: 900px;
+      text-align: left; }
+      body section.content header h1 {
+        font: 72px "ChunkFive", Helvetica, Arial, serif;
+        margin: 60px 0 -10px;
+        color: #595959; }
+      body section.content header p {
+        font-size: 18px;
+        color: #bfbfbf;
+        margin-left: .5em; }
+    body section.content form input[type="search"] {
+      border: none;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      -o-border-radius: 3px;
+      border-radius: 3px;
+      font: 24px "ChunkFive", Helvetica, Arial, serif; }
     body section.content section.example-players h3 {
       text-transform: uppercase;
       border-bottom: 1px solid #ccc; }

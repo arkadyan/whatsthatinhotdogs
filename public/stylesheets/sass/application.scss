@@ -1,11 +1,5 @@
 @import 'bourbon/bourbon';
 @import '_reset.scss';
-
-$body-font-size: 16px;
-$fg-max-columns: 12;
-$fg-column: golden-ratio($body-font-size, 5);
-$fg-gutter: golden-ratio($body-font-size, 3);
-$fg-max-width: 1400px;
-
+@import '_base.scss';
 @import '_index.scss';
 
