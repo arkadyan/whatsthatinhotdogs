@@ -87,7 +87,8 @@ body {
     body form input[type="text"]:focus {
       border-color: #000; }
   body section.player {
-    margin-top: 60px; }
+    margin-top: 60px;
+    padding: 0 20px; }
     body section.player header {
       border-top: 1px solid #eee;
       padding: 60px 0 20px; }
