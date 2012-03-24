@@ -7,16 +7,7 @@
   
   window.Players = Backbone.Collection.extend({
     model: Player,
-    url: 'public/players.json',
-    
-    parse: function(response) {
-      var resp = [];
-      var players = response['data']['players'];
-      for (var player in players) {
-        resp.push(players[player]);
-      }
-      return resp;
-    }
+    url: 'players_2011.json'
   });
 
   window.Team = Players.extend({
