@@ -28,80 +28,28 @@ input, select {
   vertical-align: middle; }
 
 /* Clearfix hack I love you */
-.clearfix:after, body section.content section.player ul:after {
+.clearfix:after {
   content: ".";
   display: block;
   height: 0;
   clear: both;
   visibility: hidden; }
 
-.clearfix, body section.content section.player ul {
+.clearfix {
   display: inline-block; }
 
 /* Hide from IE Mac \*/
-.clearfix, body section.content section.player ul {
+.clearfix {
   display: block; }
 
 /* End hide from IE Mac */
-@font-face {
-  font-family: '../fonts/ChunkFive';
-  src: url("../fonts/Chunkfive-webfont.eot");
-  src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../fonts/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 body {
-  text-align: center;
-  font: 16px "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+  text-align: center; }
   body section.content {
     margin: 0 auto;
     max-width: 1400px; }
-    body section.content header {
-      margin: 0 auto 20px;
-      max-width: 900px;
-      text-align: left; }
-      body section.content header h1 {
-        font: 72px "ChunkFive", Helvetica, Arial, serif;
-        margin: 60px 0 -10px;
-        color: #595959; }
-      body section.content header p {
-        font-size: 18px;
-        color: #bfbfbf;
-        margin-left: .5em; }
-    body section.content form input[type="text"] {
-      border: 1px solid #ccc;
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      font: 24px "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-      padding: 4px 8px;
-      -webkit-font-smoothing: antialiased;
-      width: 48.821%; }
-    body section.content form input[type="submit"] {
-      -webkit-border-radius: 3px;
-      -moz-border-radius: 3px;
-      -ms-border-radius: 3px;
-      -o-border-radius: 3px;
-      border-radius: 3px;
-      font: 24px "ChunkFive", Helvetica, Arial, serif;
-      padding: 8px 14px;
-      border: none;
-      line-height: 1em;
-      background: #595959;
-      color: #fff;
-      text-shadow: 0 -1px 0 #262626;
-      -webkit-font-smoothing: antialiased; }
-      body section.content form input[type="submit"]:hover {
-        background: #3f3f3f;
-        cursor: pointer; }
-    body section.content section.player {
-      margin-top: 30px; }
-      body section.content section.player h2 {
-        font: 48px "ChunkFive", Helvetica, Arial, serif;
-        color: #595959; }
-      body section.content section.player ul {
-        list-style: none; }
-        body section.content section.player ul li {
-          float: left; }
+    body section.content header h1 {
+      font: bold 34px Helvetica, Arial, sans-serif;
+      margin-bottom: 10px; }
+    body section.content header p {
+      margin-bottom: 20px; }

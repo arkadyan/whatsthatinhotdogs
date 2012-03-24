@@ -1,73 +1,23 @@
 body {
   text-align: center;
-  font: $body-font-size $body-font-family;
 
   section.content {
     margin: 0 auto;
-    max-width: $fg-max-width;
+    max-width: 1400px;
 
     header {
-      margin: 0 auto 20px;
-      max-width: 900px;
-      text-align: left;
-
       h1 {
-        font: 72px $header-font-family;
-        margin: 60px 0 -10px;
-        color: $dark-gray;
+        font: bold 34px Helvetica, Arial, sans-serif;
+        margin-bottom: 10px;
       }
 
       p {
-        font-size: 18px;
-        color: lighten($dark-gray, 40%);
-        margin-left: .5em;
+        margin-bottom: 20px;
       }
     }
 
     form {
-      input[type="text"] {
-        border: 1px solid #ccc;
-        @include border-radius(3px);
-        font: 24px $body-font-family;
-        padding: 4px 8px;
-        -webkit-font-smoothing: antialiased;
-        width: flex-grid(6);
-      }
-
-      input[type="submit"] {
-        @include border-radius(3px);
-        font: 24px $header-font-family;
-        padding: 8px 14px;
-        border: none;
-        line-height: 1em;
-        background: $dark-gray;
-        color: #fff;
-        text-shadow: 0 -1px 0 darken($dark-gray, 20%);
-        -webkit-font-smoothing: antialiased;
-
-        &:hover {
-          background: darken($dark-gray, 10%);
-          cursor: pointer;
-        }
-      }
-    }
-
-    section.player {
-      margin-top: 30px;
-
-      h2 {
-        font: 48px $header-font-family;
-        color: $dark-gray;
-      }
-
-      ul {
-        list-style: none;
-        @extend .clearfix;
-
-        li {
-          float: left;
-        }
-      }
+      
     }
   }
 }
