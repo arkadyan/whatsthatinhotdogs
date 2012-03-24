@@ -7,7 +7,28 @@
   <script src="public/javascripts/vendor/jquery-1.6.1.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/vendor/underscore-min.js" type="text/javascript" charset="utf-8"></script>
   <script src="public/javascripts/vendor/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script src="public/javascripts/models.js" type="text/javascript" charset="utf-8"></script>
+  <script src="public/javascripts/views.js" type="text/javascript" charset="utf-8"></script>
+  
+  
+  <script type="text/template" id="player-template">
+    <div class="player">
+      <div class="name">
+        <%= player_full_name %>
+      </div>
+      <div class="salary">
+        <%= salary %>
+      </div>
+    </div>
+  </script>
 
+  <script type="text/javascript" charset="utf-8">
+    jQuery(function() {
+      window.players.fetch();
+    })
+  </script>
+  
 </head>
 <body>
   <h1>What&rsquo;s that in hot dogs?</h1>
