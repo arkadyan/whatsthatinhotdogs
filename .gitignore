@@ -1,2 +1,4 @@
 .tm_properties
 *.sass-cache
+venv
+*.pyc
