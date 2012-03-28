@@ -1,13 +1,12 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
+from utils import jsonp
 app = Flask(__name__)
 
-from utils import jsonp
-
 @app.route('/')
-def hello():
-    return 'Hello World!'
-
+def index():
+  return render_template('index.html')
+  
 @app.route('/team/<team>', defaults={'year': 2011})
 @app.route('/team/<team>/<year>', methods=['GET'])
 @jsonp
