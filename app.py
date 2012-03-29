@@ -16,6 +16,12 @@ def team(team, year):
     data = get_team(team, year=year)
     return jsonify(team=team,
                    data=data)
+
+@app.route('/players', defaults={'year': 2011})
+@app.route('/players/<year>', methods=['GET'])
+@jsonp
+def players(year):
+  return render_template('players_2011.json')
     
 @app.route('/player/<name>', defaults={'year': 2011})
 @app.route('/player/<name>/<year>', methods=['GET'])

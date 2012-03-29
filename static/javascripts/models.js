@@ -4,7 +4,7 @@
   
   window.Players = Backbone.Collection.extend({
     model: Player,
-    url: '/static/players_2011.json',
+    url: '/players',
     
     find_by_name: function(name) {
       return _.find(this.models, function(player) {
