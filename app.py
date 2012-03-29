@@ -21,6 +21,7 @@ def team(team, year):
 @app.route('/players/<year>', methods=['GET'])
 @jsonp
 def players(year):
+  # TODO Make this actually listen to the year and serve up generated content
   return render_template('players_2011.json')
     
 @app.route('/player/<name>', defaults={'year': 2011})
