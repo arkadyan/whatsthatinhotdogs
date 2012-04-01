@@ -101,6 +101,13 @@ def jsonp(func):
         else:
             return func(*args, **kwargs)
     return decorated_function
+    
+def hotdog_data_for_year(year):
+  """Return a dictionary of the team hotdog prices for a given year."""
+  prices = {}
+  for key, value in hotdog_data.iteritems():
+    prices[key] = value[year]
+  return prices
 
 def process_players(data, hotdog_price):
     """
