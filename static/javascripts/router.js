@@ -1,7 +1,6 @@
 window.HotDog = Backbone.Router.extend({
   routes: {
-    '': 'home',
-    'blank': 'blank'
+    '': 'home'
   },
     
   initialize: function() {
