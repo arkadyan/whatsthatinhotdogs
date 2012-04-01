@@ -5,7 +5,7 @@ window.PlayerView = Backbone.View.extend({
   initialize: function() {
     _.bindAll(this, 'render');
     this.model.bind('change', this.render);
-      
+    
     this.template = _.template($('#player-template').html());
   },
     

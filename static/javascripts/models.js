@@ -22,6 +22,15 @@
     url: 'http://severe-mist-9223.herokuapp.com/team/redsox'
   });
   
+  
+  window.Prices = Backbone.Model.extend({
+    url: '/prices'
+  });
+  
+  
   window.players = new Players();
   window.redsox = new Team();
+  
+  window.prices = new Prices();
+  
 })(jQuery);
