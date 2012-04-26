@@ -1,6 +1,6 @@
 import os
 from flask import Flask, jsonify, render_template
-from utils import jsonp, hotdog_data_for_year
+from utils import jsonp, hotdog_data_for_year, beer_data_for_year
 app = Flask(__name__)
 
 @app.route('/')
@@ -14,11 +14,14 @@ def players(year):
   # TODO: Make /players actually listen to the year and serve up generated content
   return render_template('players_2011.json')
 
-@app.route('/prices', defaults={'year': 2011})
-@app.route('/prices/<year>', methods=['GET'])
+@app.route('/prices', defaults={'year': 2011, 'currency': 'hotdogs'})
+@app.route('/prices/<currency>/<year>', methods=['GET'])
 @jsonp
-def prices(year):
-  return jsonify(hotdog_data_for_year(str(year)))
+def prices(currency, year):
+  if currency == 'beer':
+    return jsonify(beer_data_for_year(str(year)))
+  else:
+    return jsonify(hotdog_data_for_year(str(year)))
     
 @app.route('/team/<team>', defaults={'year': 2011})
 @app.route('/team/<team>/<year>', methods=['GET'])

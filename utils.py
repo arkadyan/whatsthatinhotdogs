@@ -6,87 +6,9 @@ Taken from:  https://gist.github.com/1094140
 from functools import wraps
 from flask import request, current_app
 from hotdog import hotdog_data
+from beer import beer_data
 import json
 
-#hotdog_data = {
-# 'angels': {'2009': 3, '2010': 3, '2011': 3, 'Team': 'Los Angeles Angels'},
-# 'astros': {'2009': 4.75,
-#            '2010': 4.75,
-#            '2011': 4.75,
-#            'Team': 'Houston Astros'},
-# 'athletics': {'2009': 3.5,
-#               '2010': 3.5,
-#               '2011': 3.5,
-#               'Team': 'Oakland Athletics'},
-# 'bluejays': {'2009': 3.7999999999999998,
-#              '2010': 5,
-#              '2011': 5.1100000000000003,
-#              'Team': 'Toronto Blue Jays'},
-# 'braves': {'2009': 4.25, '2010': 4.25, '2011': 4.5, 'Team': 'Atlanta Braves'},
-# 'brewers': {'2009': 2.75,
-#             '2010': 3.25,
-#             '2011': 3.25,
-#             'Team': 'Milwaukee Brewers'},
-# 'cardinals': {'2009': 4,
-#               '2010': 4,
-#               '2011': 4.25,
-#               'Team': 'St. Louis Cardinals'},
-# 'cubs': {'2009': 3, '2010': 4.25, '2011': 4.5, 'Team': 'Chicago Cubs'},
-# 'diamondbacks': {'2009': 3.5,
-#                  '2010': 2.75,
-#                  '2011': 2.75,
-#                  'Team': 'Arizona Diamondbacks'},
-# 'dodgers': {'2009': 5, '2010': 5, '2011': 5, 'Team': 'Los Angeles Dodgers'},
-# 'giants': {'2009': 4.25,
-#            '2010': 4.5,
-#            '2011': 4.75,
-#            'Team': 'San Francisco Giants'},
-# 'indians': {'2009': 4.25,
-#             '2010': 4.25,
-#             '2011': 4.25,
-#             'Team': 'Cleveland Indians'},
-# 'mariners': {'2009': 4.25,
-#              '2010': 3.5,
-#              '2011': 3.5,
-#              'Team': 'Seattle Mariners'},
-# 'marlins': {'2009': 5, '2010': 5, '2011': 5, 'Team': 'Florida Marlins'},
-# 'mets': {'2009': 4.75, '2010': 5, '2011': 5, 'Team': 'New York Mets'},
-# 'nationals': {'2009': 4.5,
-#               '2010': 4.5,
-#               '2011': 4.5,
-#               'Team': 'Washington Nationals'},
-# 'orioles': {'2009': 2.5,
-#             '2010': 2.5,
-#             '2011': 2.5,
-#             'Team': 'Baltimore Orioles'},
-# 'padres': {'2009': 4, '2010': 4, '2011': 4, 'Team': 'San Diego Padres'},
-# 'phillies': {'2009': 3.75,
-#              '2010': 3.75,
-#              '2011': 3.75,
-#              'Team': 'Philadelphia Phillies'},
-# 'pirates': {'2009': 2.5,
-#             '2010': 2.5,
-#             '2011': 2.75,
-#             'Team': 'Pittsburgh Pirates'},
-# 'rangers': {'2009': 2.75,
-#             '2010': 4.75,
-#             '2011': 4.75,
-#             'Team': 'Texas Rangers'},
-# 'rays': {'2009': 5, '2010': 5, '2011': 5, 'Team': 'Tampa Bay Rays'},
-# 'reds': {'2009': 1, '2010': 1, '2011': 1, 'Team': 'Cincinnati Reds'},
-# 'redsox': {'2009': 4.5, '2010': 4.5, '2011': 4.5, 'Team': 'Boston Red Sox'},
-# 'rockies': {'2009': 3.25,
-#             '2010': 3.25,
-#             '2011': 3.25,
-#             'Team': 'Colorado Rockies'},
-# 'royals': {'2009': 4, '2010': 4, '2011': 4, 'Team': 'Kansas City Royals'},
-# 'tigers': {'2009': 3.5, '2010': 3, '2011': 4, 'Team': 'Detroit Tigers'},
-# 'twins': {'2009': 3.5, '2010': 3.75, '2011': 3.75, 'Team': 'Minnesota Twins'},
-# 'whitesox': {'2009': 3.25,
-#              '2010': 3.25,
-#              '2011': 3.5,
-#              'Team': 'Chicago White Sox'},
-# 'yankees': {'2009': 3, '2010': 3, '2011': 3, 'Team': 'New York Yankees'}}
 
 def jsonp(func):
     """Wraps JSONified output for JSONP requests."""
@@ -106,6 +28,13 @@ def hotdog_data_for_year(year):
   """Return a dictionary of the team hotdog prices for a given year."""
   prices = {}
   for key, value in hotdog_data.iteritems():
+    prices[key] = value[year]
+  return prices
+
+def beer_data_for_year(year):
+  """Return a dictionary of the team beer prices for a given year."""
+  prices = {}
+  for key, value in beer_data.iteritems():
     prices[key] = value[year]
   return prices
 
