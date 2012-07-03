@@ -8,6 +8,10 @@ get '/' do
   erb :index
 end
 
+get '/prices' do
+  send_file 'public/data/2011/prices_2011.json'
+end
+
 get '/players' do
   send_file 'public/data/2011/players_2011.json'
 end
