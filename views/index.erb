@@ -30,17 +30,17 @@
       <h2>{{ player_full_name }}</h2>
       <div class="team">
         <strong>
-        {{ team_full_name }}
+          {{ team_full_name }}
         </strong>
-        <span>{{ commify(parseInt(hotdog_salary)) }} hot dogs</span>
-        </div>
+        <span>{{ commify hotdog_salary }} hot dogs</span>
+      </div>
       <aside>
         <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
       </aside>
     </header>
 
     <ul class="hotdog">
-      {{lotsOfHotdogs(hotdog_salary)}}
+      {{ lotsOfHotdogs hotdog_salary }}
     </ul>
   </script>
 
@@ -71,8 +71,6 @@
     <h1>What&rsquo;s that in hot dogs?</h1>
 
     <p>Search for your favorite baseball player and see how many ballpark hot dogs they cost their team in 2011.</p>
-
-    <p>Or, what about beer?</p>
   </header>
 
   <form action="" method="get" accept-charset="utf-8">

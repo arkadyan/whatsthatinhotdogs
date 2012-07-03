@@ -1,6 +1,8 @@
 var commify = function(num) {
+  num = parseInt(num);
   return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 };
+Handlebars.registerHelper('commify', commify);
 
 var lotsOfHotdogs = function(salary) {
   var text = [];
@@ -9,3 +11,6 @@ var lotsOfHotdogs = function(salary) {
   }
   return text.join('');
 };
+Handlebars.registerHelper('lotsOfHotdogs', function(salary) {
+  return new Handlebars.SafeString( lotsOfHotdogs(salary) );
+});
