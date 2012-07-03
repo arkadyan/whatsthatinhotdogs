@@ -6,7 +6,7 @@ window.PlayerView = Backbone.View.extend({
     _.bindAll(this, 'render');
     this.model.bind('change', this.render);
     
-    this.template = _.template($('#player-template').html());
+    this.template = Handlebars.compile($('#player-template').html());
   },
     
   render: function() {
@@ -22,7 +22,7 @@ window.PlayersView = Backbone.View.extend({
   
   initialize: function() {
     _.bindAll(this, 'render');
-    this.template = _.template($('#players-template').html());
+    this.template = Handlebars.compile($('#players-template').html());
     this.collection.bind('reset', this.render);
   },
   
