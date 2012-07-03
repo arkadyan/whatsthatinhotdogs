@@ -12,8 +12,3 @@ window.HotDog = Backbone.Router.extend({
   home: function() {
   }
 });
-  
-$(function() {
-  window.App = new HotDog();
-  Backbone.history.start();
-});
