@@ -1,4 +1,3 @@
-
 """
 Taken from:  https://gist.github.com/1094140
 """
@@ -49,7 +48,7 @@ def process_players(data, hotdog_price):
         players[salary['player']] = salary
     return players
 
-def get_team(team, year=2011):
+def get_team(team, year=2012):
     import urllib
     import json
     api_key = 'pqvy9pxvzn795fr2j9c2zatk'
@@ -72,8 +71,8 @@ def get_team(team, year=2011):
             #'total': total
             }
     
-#http://api.usatoday.com/open/salaries/mlb?encoding=json&players=derek-jeter&seasons=2011&api_key=zgjwf79eps2wrauw83792wbg
-def get_player(name, year=2011):
+#http://api.usatoday.com/open/salaries/mlb?encoding=json&players=derek-jeter&seasons=2012&api_key=zgjwf79eps2wrauw83792wbg
+def get_player(name, year=2012):
     import urllib
     import json
     name = name.lower()
