@@ -1,3 +1,3 @@
-window.Prices = Backbone.Model.extend({
+HD.Prices = Backbone.Model.extend({
   url: '/prices'
 });

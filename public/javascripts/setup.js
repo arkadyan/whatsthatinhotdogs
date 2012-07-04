@@ -1,17 +1,18 @@
 $(function() {
   // Initialize Backbone models.
-  window.prices = new Prices();
+  HD.prices = new HD.Prices();
   
   // Initialize Backbone collections.
-  window.players = new Players();
-  window.redsox = new Team();
+  HD.players = new HD.Players();
+  HD.redsox = new HD.Team();
   
 
   // Initialize Backbone views.
-  // App.chromeView = new App.ChromeView({ el: $("body") });
-  // App.router = new App.Router;
+  HD.playersView = new HD.PlayersView({
+    collection: HD.players
+  });
   
-  window.App = new HotDog();
+  HD.router = new HD.Router;
 
   // Initialize the Backbone router.
   Backbone.history.start();

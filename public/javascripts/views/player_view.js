@@ -1,4 +1,4 @@
-window.PlayerView = Backbone.View.extend({
+HD.PlayerView = Backbone.View.extend({
   tagName: 'section',
   className: 'player',
     

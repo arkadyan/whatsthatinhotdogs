@@ -1,5 +1,5 @@
-window.Players = Backbone.Collection.extend({
-  model: Player,
+HD.Players = Backbone.Collection.extend({
+  model: HD.Player,
   url: '/players',
     
   find_by_name: function(name) {

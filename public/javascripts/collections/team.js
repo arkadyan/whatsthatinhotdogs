@@ -1,3 +1,3 @@
-window.Team = Players.extend({
+HD.Team = HD.Players.extend({
   url: 'http://severe-mist-9223.herokuapp.com/team/redsox'
 });

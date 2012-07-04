@@ -1,4 +1,4 @@
-window.PlayersView = Backbone.View.extend({
+HD.PlayersView = Backbone.View.extend({
   tagName: 'section',
   className: 'players',
   
@@ -9,14 +9,13 @@ window.PlayersView = Backbone.View.extend({
   },
   
   render: function() {
-    var $players,
-        collection = this.collection;
+    var players = this.collection;
       
     // Set up autocomplete on the search box.
     $('#player_search').autocomplete({
-      source: collection.names(),
+      source: players.names(),
       select: function(event, ui) {
-        var playerView = new PlayerView({model: players.find_by_name(ui.item.value)});
+        var playerView = new HD.PlayerView({model: players.find_by_name(ui.item.value)});
         $("#player").html(playerView.render().el);
       }
     });
