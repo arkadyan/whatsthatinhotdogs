@@ -1,7 +1,8 @@
 $(function() {
   // Initialize Backbone models.
-  HD.prices = new HD.Prices();
-  
+  // HD.prices = new HD.Prices();
+  HD.teams = new HD.Teams();
+
   // Initialize Backbone collections.
   HD.players = new HD.Players();
   HD.redsox = new HD.Team();

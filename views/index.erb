@@ -39,20 +39,20 @@
 
   <script type="text/template" id="player-template">
     <header>
-      <h2>{{ player_full_name }}</h2>
+      <h2>{{ name }}</h2>
       <div class="team">
         <strong>
-          {{ team_full_name }}
+          {{ teamName }}
         </strong>
-        <span>{{ commify hotdog_salary }} hot dogs</span>
+        <span>{{ commify salary }} {{ unit }}</span>
       </div>
       <aside>
-        <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
+        <p>1 <span>hot dog</span> = 10,000 real {{ unit }}</p>
       </aside>
     </header>
 
     <ul class="hotdog">
-      {{ lotsOfHotdogs hotdog_salary }}
+      {{ lotsOfHotdogs salary }}
     </ul>
   </script>
 
