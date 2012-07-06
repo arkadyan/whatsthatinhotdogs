@@ -15,12 +15,19 @@
 
   <script src="/javascripts/app.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/helpers.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/models/player.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/models/prices.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/collections/players.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/collections/team.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/views/player_view.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/views/players_view.js" type="text/javascript" charset="utf-8"></script>
+
+  <%
+    {
+      :models => [:player, :team],
+      :collections => [:players, :teams],
+      :views => [:players_view, :player_view]
+    }.each do |up, files|
+      files.each do |file|
+  %>
+      <script src="/javascripts/<%= [up,file]*'/' %>.js" type="text/javascript"  charset="utf-8"></script>
+    <% end %>
+  <% end %>
+
   <script src="/javascripts/router.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/setup.js" type="text/javascript" charset="utf-8"></script>
 
@@ -47,14 +54,6 @@
     <ul class="hotdog">
       {{ lotsOfHotdogs hotdog_salary }}
     </ul>
-  </script>
-
-
-  <script type="text/javascript" charset="utf-8">
-    jQuery(function() {
-      HD.prices.fetch();
-      HD.players.fetch();
-    })
   </script>
 
   <script type="text/javascript">
