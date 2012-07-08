@@ -13,13 +13,25 @@ var lotsOfHotdogs = function(salary) {
 };
 
 var singular = function(term) {
-  var a = term.match(/park/) ? '' : 'a ';
-  return a+term.replace(/s$/,'');
+  return term.replace(/trips/,'trip').replace(/s$/,'');
 };
+
+var liter = function(term) {
+  if(term.match(/trip/)) {
+    return 'trips';
+  } else {
+    return term;
+  }
+};
+
 
 Handlebars.registerHelper('lotsOfHotdogs', function(salary) {
   return new Handlebars.SafeString( lotsOfHotdogs(salary) );
 });
+
 Handlebars.registerHelper('singular', function(salary) {
   return new Handlebars.SafeString( singular(salary) );
+});
+Handlebars.registerHelper('liter', function(salary) {
+  return new Handlebars.SafeString( liter(salary) );
 });

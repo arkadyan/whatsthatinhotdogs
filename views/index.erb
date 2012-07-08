@@ -48,12 +48,12 @@
 
       <div class='player-meta'>
         <div class='unitSalary'>
-          at his home stadium, {{ singular unit }} costs ${{ perUnit }}<br>
-          making his {{ singular unit }} salary: {{ commify salary}} {{unit}}
+          at his home stadium, a {{ singular unitTerm }} costs ${{ perUnit }}<br>
+          making his {{ singular unitTerm }} salary: {{ commify salary}} {{ liter unitTerm}}
         </div>
 
         <aside class="{{ unit }}">
-          <p>1 <span>&nbsp;</span> = 10,000 real {{ unit }}</p>
+          <p>1 <span>&nbsp;</span> = 10,000 real {{ unitTerm }}</p>
         </aside>
       </div>
     </header>
@@ -76,9 +76,12 @@
     <p>
       how much does <input type="text" name="" id="player_search" value="" placeholder="Search for player" /> make in <select id='salary_unit'>
         <option>hot dogs</option>
+        <option value='FCI'>family trips to the game*</option>
         <option>beer</option>
-        <option>parking</option>
+        <option value='parking'>parking spots</option>
         <option>tickets</option>
+        <option>soda</option>
+        <option>cap</option>
       </select>
     </p>
   </form>

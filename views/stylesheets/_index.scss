@@ -49,7 +49,7 @@ body {
       width: flex-grid(4);
     }
     select {
-      width: flex-grid(2);
+      width: flex-grid(3);
       height: 2em;
     }
   }
@@ -67,8 +67,8 @@ body {
         color: lighten($dark-gray, 20%);
       }
 
-      .player-head { width: flex-grid(7); }
-      .player-meta { width: flex-grid(5); }
+      .player-head { width: flex-grid(6); }
+      .player-meta { width: flex-grid(6); }
 
       .player-head {
         float: left;
@@ -78,7 +78,7 @@ body {
           font: 48px $header-font-family;
           color: $blue;
           // thanks Saltalamacchia
-          white-space: nowrap; 
+          white-space: nowrap;
         }
 
         strong {
