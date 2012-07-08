@@ -29,19 +29,28 @@ body {
   }
 
   form {
-    input[type="text"] {
+    color: #8C8C8C;
+
+    input[type="text"], select {
+      vertical-align: baseline;
       border: 1px solid #ccc;
       font: 24px $body-font-family;
       padding: 6px 8px;
       @include box-shadow(inset 0 2px 3px #eee);
       -webkit-font-smoothing: antialiased;
-      width: flex-grid(6);
       outline: none;
       background: #fff url(../images/search.png) 98% center no-repeat;
 
       &:focus {
         border-color: #000;
       }
+    }
+    input[type="text"] {
+      width: flex-grid(4);
+    }
+    select {
+      width: flex-grid(2);
+      height: 2em;
     }
   }
 
@@ -54,43 +63,57 @@ body {
       border-top: 1px solid #eee;
       padding: 60px 0 20px;
 
-      h2 {
-        font: 48px $header-font-family;
-        color: $blue;
-        float: left;
-        margin-right: 30px;
+      div {
+        color: lighten($dark-gray, 20%);
       }
 
-      div {
-        float: right;
-        color: lighten($dark-gray, 20%);
-        margin-top: 4px;
+      .player-head { width: flex-grid(7); }
+      .player-meta { width: flex-grid(5); }
+
+      .player-head {
+        float: left;
+        text-align: left;
+
+        h2 {
+          font: 48px $header-font-family;
+          color: $blue;
+          // thanks Saltalamacchia
+          white-space: nowrap; 
+        }
 
         strong {
           text-transform: uppercase;
           letter-spacing: 1px;
           display: inline-block;
-
-          &:after {
-            content: "–";
-            padding: 0 10px;
-            display: inline-block;
-          }
         }
       }
 
-      aside {
+      .player-meta {
         float: right;
+        text-align: right;
+      }
+
+/*      div.unitSalary {
+        margin-top: 4px;
+      }
+*/
+      aside {
         color: lighten($dark-gray, 40%);
-        clear: right;
+        margin-top: 1em;
 
         span {
           text-indent: -9999px;
           width: 18px;
           height: 18px;
           background: url(../images/smallhotdog.png);
+          background-size: 100%;
           display: inline-block;
         }
+
+        &.hot.dogs  span {background-image: url(../images/units/hotdog.png);}
+        &.beers     span {background-image: url(../images/units/beer.png);}
+        &.parkings  span {background-image: url(../images/units/parking.png);}
+        &.tickets   span {background-image: url(../images/units/ticket_grey.png);}
       }
     }
 
@@ -103,8 +126,14 @@ body {
         text-indent: -9999px;
         width: 50px;
         height: 50px;
-        background: url(../images/hotdog.png) 0 0 no-repeat;
+        background-position: 0 0;
+        background-repeat: no-repeat;
       }
+
+      &.hot.dogs  li {background-image: url(../images/units/hotdog.png);}
+      &.beers     li {background-image: url(../images/units/beer.png);}
+      &.parkings  li {background-image: url(../images/units/parking.png);}
+      &.tickets   li {background-image: url(../images/units/ticket.png);}
     }
   }
 }

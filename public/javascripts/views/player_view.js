@@ -10,12 +10,14 @@ HD.PlayerView = Backbone.View.extend({
   },
 
   render: function() {
-    var scope = 'hot dog';
-    
+    var unit = HD.unit();
+
     var data = $.extend(this.model.toJSON(), {
-      salary: this.model.salary(scope),
+      salary: this.model.salary(unit),
+      realSalary: this.model.salary(),
+      perUnit: this.model.team().get(unit),
       teamName: this.model.teamName(),
-      unit: scope+'s'
+      unit: unit+'s'
     });
     var renderedContent = this.template(data);
     $(this.el).html(renderedContent);

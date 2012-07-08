@@ -39,19 +39,26 @@
 
   <script type="text/template" id="player-template">
     <header>
-      <h2>{{ name }}</h2>
-      <div class="team">
-        <strong>
-          {{ teamName }}
-        </strong>
-        <span>{{ commify salary }} {{ unit }}</span>
+      <div class='player-head'>
+        <h2>{{ name }}</h2>
+        <div class="team">
+          of the <strong>{{ teamName }}</strong> makes ${{ commify realSalary }} per season
+        </div>
       </div>
-      <aside>
-        <p>1 <span>hot dog</span> = 10,000 real {{ unit }}</p>
-      </aside>
+
+      <div class='player-meta'>
+        <div class='unitSalary'>
+          at his home stadium, {{ singular unit }} costs ${{ perUnit }}<br>
+          making his {{ singular unit }} salary: {{ commify salary}} {{unit}}
+        </div>
+
+        <aside class="{{ unit }}">
+          <p>1 <span>&nbsp;</span> = 10,000 real {{ unit }}</p>
+        </aside>
+      </div>
     </header>
 
-    <ul class="hotdog">
+    <ul class="{{ unit }}">
       {{ lotsOfHotdogs salary }}
     </ul>
   </script>
