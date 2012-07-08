@@ -6,10 +6,9 @@ HD.Player = Backbone.Model.extend({
     return HD.teams.get(this.get('team_id'));
   },
   teamName: function() {
-    console.log("--" + " : " + this.team().get('name'));
     return this.team().get('name');
   },
-  // attribute: 'hot dog', 'beer'
+  // attribute: 'hot dog', 'beer', 'parking', 'ticket'
   salary: function(attribute) {
     var base = parseFloat(this.get('salary').replace(/,/g, ''));
     if(typeof(attribute) != 'undefined') {
