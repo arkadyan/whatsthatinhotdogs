@@ -168,7 +168,10 @@ ul.ui-autocomplete {
 
 footer {
   color: lighten($dark-gray, 40%);
-  margin: 20px 0;
+  margin: 100px auto;
+  width: flex-grid(8);
+
+  p {margin-bottom: 1em;}
 
   a {
     color: lighten($dark-gray, 40%);
