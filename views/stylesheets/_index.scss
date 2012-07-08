@@ -110,10 +110,13 @@ body {
           display: inline-block;
         }
 
-        &.hot.dogs  span {background-image: url(../images/units/hotdog.png);}
-        &.beers     span {background-image: url(../images/units/beer.png);}
-        &.parkings  span {background-image: url(../images/units/parking.png);}
-        &.tickets   span {background-image: url(../images/units/ticket_grey.png);}
+        &.hot.dog  span {background-image: url(../images/units/hotdog_grey.png);}
+        &.beer     span {background-image: url(../images/units/beer_grey.png);}
+        &.parking  span {background-image: url(../images/units/parking_grey.png);}
+        &.ticket   span {background-image: url(../images/units/ticket_grey.png);}
+        &.FCI      span {background-image: url(../images/units/fan_cost_grey.png);}
+        &.cap      span {background-image: url(../images/units/cap_grey.png);}
+        &.soda     span {background-image: url(../images/units/soda_grey.png);}
       }
     }
 
@@ -130,10 +133,13 @@ body {
         background-repeat: no-repeat;
       }
 
-      &.hot.dogs  li {background-image: url(../images/units/hotdog.png);}
-      &.beers     li {background-image: url(../images/units/beer.png);}
-      &.parkings  li {background-image: url(../images/units/parking.png);}
-      &.tickets   li {background-image: url(../images/units/ticket.png);}
+      &.hot.dog  li {background-image: url(../images/units/hotdog.png);}
+      &.beer     li {background-image: url(../images/units/beer.png);}
+      &.parking  li {background-image: url(../images/units/parking.png);}
+      &.ticket   li {background-image: url(../images/units/ticket.png);}
+      &.FCI      li {background-image: url(../images/units/FCI.png);}
+      &.soda     li {background-image: url(../images/units/soda.png);}
+      &.cap      li {background-image: url(../images/units/cap.png);}
     }
   }
 }
