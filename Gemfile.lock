@@ -22,5 +22,4 @@ PLATFORMS
 
 DEPENDENCIES
   compass (~> 0.12.1)
-  rack
   sinatra
