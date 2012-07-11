@@ -1,6 +1,10 @@
 require 'compass' #must be loaded before sinatra
 require 'sinatra'
 
+# Added headers for Varnish [cache the hell out of it, yo]
+before do
+  response.headers['Cache-Control'] = 'public, max-age=36000'
+end
 
 get '/' do
   erb :index
