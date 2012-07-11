@@ -10,12 +10,12 @@ get '/' do
   erb :index
 end
 
-get '/prices' do
-  send_file 'public/data/2011/prices_2011.json'
+get '/teams' do
+  send_file 'public/data/2012/teams.json'
 end
 
 get '/players' do
-  send_file 'public/data/2011/players_2011.json'
+  send_file 'public/data/2012/players.json'
 end
 
 get '/stylesheets/:name.css' do

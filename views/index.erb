@@ -15,12 +15,19 @@
 
   <script src="/javascripts/app.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/helpers.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/models/player.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/models/prices.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/collections/players.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/collections/team.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/views/player_view.js" type="text/javascript" charset="utf-8"></script>
-  <script src="/javascripts/views/players_view.js" type="text/javascript" charset="utf-8"></script>
+
+  <%
+    {
+      :models => [:player, :team],
+      :collections => [:players, :teams],
+      :views => [:players_view, :player_view]
+    }.each do |up, files|
+      files.each do |file|
+  %>
+      <script src="/javascripts/<%= [up,file]*'/' %>.js" type="text/javascript"  charset="utf-8"></script>
+    <% end %>
+  <% end %>
+
   <script src="/javascripts/router.js" type="text/javascript" charset="utf-8"></script>
   <script src="/javascripts/setup.js" type="text/javascript" charset="utf-8"></script>
 
@@ -32,30 +39,68 @@
 
   <script type="text/template" id="player-template">
     <header>
-      <h2>{{ player_full_name }}</h2>
-      <div class="team">
-        <strong>
-          {{ team_full_name }}
-        </strong>
-        <span>{{ commify hotdog_salary }} hot dogs</span>
+      <div class='player-head'>
+        <h2>{{ name }}</h2>
+        <div class="team">
+          of the <strong>{{ teamName }}</strong> makes ${{ commify realSalary }} per season
+        </div>
       </div>
-      <aside>
-        <p>1 <span>hot dog</span> = 10,000 real hot dogs</p>
-      </aside>
+
+      <div class='player-meta'>
+        <div class='unitSalary'>
+          at his home stadium, a {{ singular unitTerm }} costs ${{ perUnit }}<br>
+          making his {{ singular unitTerm }} salary: {{ commify salary}} {{ liter unitTerm}}
+        </div>
+
+        <aside class="{{ unit }}">
+          <p>1 <span>&nbsp;</span> = 10,000 real {{ unitTerm }}</p>
+        </aside>
+      </div>
     </header>
 
-    <ul class="hotdog">
-      {{ lotsOfHotdogs hotdog_salary }}
+    <ul class="{{ unit }}">
+      {{ lotsOfHotdogs salary }}
     </ul>
   </script>
+</head>
 
 
-  <script type="text/javascript" charset="utf-8">
-    jQuery(function() {
-      HD.prices.fetch();
-      HD.players.fetch();
-    })
-  </script>
+<body>
+  <header class="main">
+    <h1>What&rsquo;s that in hot dogs?</h1>
+
+    <p>Search for your favorite baseball player and see how many ballpark hot dogs they cost their team in 2012.</p>
+  </header>
+
+  <form action="" method="get" accept-charset="utf-8">
+    <p>
+      how much does <input type="text" name="" id="player_search" value="" placeholder="Search for player" /> make in <select id='salary_unit'>
+        <option>hot dogs</option>
+        <option value='FCI'>family trips to the game*</option>
+        <option>beer</option>
+        <option value='parking'>parking spots</option>
+        <option>tickets</option>
+        <option>soda</option>
+        <option>cap</option>
+      </select>
+    </p>
+  </form>
+
+  <section id='player' class="player">
+  </section>
+
+  <footer>
+    <p>* for more on the cost of "a family trip to the game" or <a href='http://www.fancostexperience.com/pages/fcx/blog_pdfs/entry0000017_pdf006.pdf' target='_blank'>"Fan Cost Index"</a> visit the <a href='https://www.teammarketing.com/' target='_blank'>Team Marketing Report site</a>.
+    </p>
+    <p>
+      Local hot dog, beer, etc prices collected by <a href="https://www.teammarketing.com/">Team Marketing Report</a>. Salary data courtesy of the <a href="http://developer.usatoday.com/">USA Today Developer's Network</a>. Icons from <a href="http://thenounproject.com/">The Noun Project</a>.
+    </p>
+
+    <p>
+      By <a href="http://twitter.com/the55">Chris Adams</a>, <a href="http://twitter.com/kylefiedler">Kyle Fiedler</a>, Ted Lawless, Rory MacKean, and <a href="http://twitter.com/arkadyan">Matthew Shanley</a> at the 2012 <a href="http://baseballhackday.com/">Boston Baseball Hack Day</a>.
+    </p>
+
+  </footer>
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -67,32 +112,5 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-
-</head>
-
-
-<body>
-  <header class="main">
-    <h1>What&rsquo;s that in hot dogs?</h1>
-
-    <p>Search for your favorite baseball player and see how many ballpark hot dogs they cost their team in 2011.</p>
-  </header>
-
-  <form action="" method="get" accept-charset="utf-8">
-    <input type="text" name="" id="player_search" value="" placeholder="Search for player" />
-  </form>
-
-  <section id='player' class="player">
-  </section>
-
-  <footer>
-    <p>
-      By <a href="http://twitter.com/the55">Chris Adams</a>, <a href="http://twitter.com/kylefiedler">Kyle Fiedler</a>, Ted Lawless, Rory MacKean, and <a href="http://twitter.com/arkadyan">Matthew Shanley</a> at the 2012 <a href="http://baseballhackday.com/">Boston Baseball Hack Day</a>.
-    </p>
-
-    <p>
-      Salary data courtesy of the <a href="http://developer.usatoday.com/">USA Today Developer's Network</a>. Local hot dog prices collected by <a href="https://www.teammarketing.com/">Team Marketing Report</a>. Hot dog icon by Andrew Cameron, from <a href="http://thenounproject.com/">The Noun Project</a>.
-    </p>
-  </footer>
 </body>
 </html>
