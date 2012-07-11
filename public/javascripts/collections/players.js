@@ -4,12 +4,12 @@ HD.Players = Backbone.Collection.extend({
     
   find_by_name: function(name) {
     return _.find(this.models, function(player) {
-      return player.get("player_full_name") == name
+      return player.get("name") == name
     });
   },
   names: function() {
     return this.models.map(function(player){
-      return player.get('player_full_name');
+      return player.get('name');
     });
   }
 });
