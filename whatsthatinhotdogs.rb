@@ -1,8 +1,6 @@
-require 'rubygems'
 require 'compass' #must be loaded before sinatra
 require 'sinatra'
-require 'bundler/setup'
-Bundler.require
+
 
 get '/' do
   erb :index
