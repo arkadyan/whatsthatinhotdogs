@@ -4,3 +4,4 @@ venv
 *.pyc
 .DS_Store
 .rvmrc
+.rbenv-version
