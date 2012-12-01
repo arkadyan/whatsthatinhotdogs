@@ -1,5 +1,7 @@
 require 'compass' #must be loaded before sinatra
 require 'sinatra'
+require 'coffee-script'
+
 
 # Added headers for Varnish [cache the hell out of it, yo]
 before do
