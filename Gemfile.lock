@@ -24,5 +24,8 @@ DEPENDENCIES
   compass (~> 0.12.1)
   sinatra
 
+RUBY VERSION
+   ruby 2.5.3p105
+
 BUNDLED WITH
-   1.10.5
+   1.17.3
